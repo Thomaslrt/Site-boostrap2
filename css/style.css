@@ -64,4 +64,5 @@ html {
 .galerie img:hover {
     transition:all ease-in-out 0.5s;
     transform: scale(1.1);
+    cursor:pointer;
 }
