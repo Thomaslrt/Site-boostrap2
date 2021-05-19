@@ -49,10 +49,6 @@ html {
     letter-spacing: -.05rem;
 }
 
-/* .presentation h2 {
-    margin-top:auto;
-    margin-bottom:
-} */
 
 .presentation p {
     font-size: 1.25rem;
@@ -60,4 +56,12 @@ html {
     margin-top: 0;
     margin-bottom: 1rem;
 
+}
+
+.galerie img {
+    transition:all ease-in-out 0.5s;
+}
+.galerie img:hover {
+    transition:all ease-in-out 0.5s;
+    transform: scale(1.1);
 }
