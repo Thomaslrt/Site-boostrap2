@@ -11,13 +11,22 @@ html {
     color:white
 }
 
+.btncta .btn {
+    transition: all ease-in-out 0.4s;
+}
+
+.btncta .btn:hover {
+    transition: all ease-in-out 0.4s;
+    transform:scale(1.05)
+}
+
 .nav-link {
     color:black;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.4s;
 }
 
 .nav-link:hover {
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.4s;
     color:#ca421f;
     transform:scale(1.1);
 }
