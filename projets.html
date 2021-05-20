@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="bouton"><a href="#" class="btn btn-primary boutontoggle">Marges</a><img src="img/settings.svg"/></div>
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -48,6 +49,71 @@
             </div>
         </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top mx-auto tmdc">
+        <div class="row">
+          <div class="col col-md-6 col-lg-3">
+            <img class="mb-2" src="img/logo.png" alt="" width="180">
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 id='mt-mb'>Notre agence</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Informations</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="prices.html">Services</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Toiture</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="projets.html">Nos projets</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="contact.html">Nous contacter</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 dc">
+            <h5>Informations</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="mentions-legales.html">Politique de confidentialité</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="mentions-legales.html">Conditions d'utilisation</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 dc">
+            <h5>A propos</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">L'entreprise</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Nous contacter</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Partenaires</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Devenir partenaire</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        var state = false;
+        $(document).ready(function(){
+            $('.bouton').click(function(){
+                state = !state
+                if (state) {
+                        $(this).animate({"margin-left": "+=100"}, 1000, function() {
+                            console.log("av : "+state);
+                            state = true
+                            console.log("ap : "+state);
+                        });
+                } else {
+                        $(this).animate({"margin-left": "-=100"}, 1000, function() {
+                            console.log("av : "+state);
+                            state = false
+                            console.log("ap : "+state);
+                        });
+                }
+            });
+            $(".boutontoggle").click(function(){
+                $('div').each(function() {
+                    $(this).find('*').toggleClass('borderrr');
+                });
+            });
+        });
+
+        $(window).on('load', function() {
+            $('#newsletter').modal('show');
+        });
+    </script>
 </body>
 </html>
